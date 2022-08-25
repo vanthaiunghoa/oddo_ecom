@@ -10,9 +10,9 @@
     'depends': ['base', 'mail',  'portal'],
     'demo': [],
     'data': [
+        'patient.xml',
         'security/ir.model.access.csv',
         'data/sequence.xml',
-        'patient.xml',
     ],
     'installable': True,
     'application': True,

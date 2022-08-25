@@ -4,8 +4,8 @@ from odoo import models, fields, api, _
 class HospitalPatient(models.Model):
     _name = 'hospital.patient'
     _inherit = ['mail.thread', 'mail.activity.mixin', 'portal.mixin']
-    _description = 'Patient Record'
     _rec_name = 'name_sec'
+    _description = 'Patient Record'
 
     patient_name = fields.Char(string='Name', required=True)
     patient_age = fields.Integer('Age')
@@ -23,3 +23,4 @@ class HospitalPatient(models.Model):
 
         result = super(HospitalPatient, self).create(vals)
         return result
+
