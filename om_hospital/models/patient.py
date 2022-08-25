@@ -1,6 +1,12 @@
 from odoo import models, fields, api, _
 
 
+class SaleOrderInherit(models.Model):
+    _inherit = 'sale.order'
+
+    patient_name = fields.Char(string='Patient Name')
+
+
 class HospitalPatient(models.Model):
     _name = 'hospital.patient'
     _inherit = ['mail.thread', 'mail.activity.mixin', 'portal.mixin']
@@ -11,6 +17,7 @@ class HospitalPatient(models.Model):
     patient_age = fields.Integer('Age')
     notes = fields.Text(string='Notes')
     image = fields.Binary(string='Image')
+    name = fields.Text(string='Text')
     name_sec = fields.Char(string='Order Reference', required=True, copy=False, readonly=True,
                            index=True, default=lambda self: _('New'))
 
@@ -23,4 +30,3 @@ class HospitalPatient(models.Model):
 
         result = super(HospitalPatient, self).create(vals)
         return result
-
