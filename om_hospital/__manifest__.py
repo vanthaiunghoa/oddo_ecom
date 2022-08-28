@@ -10,10 +10,10 @@
     'depends': ['base', 'mail',  'portal', 'sale'],
     'demo': [],
     'data': [
-        'views/patient.xml',
-        'views/female_patient.xml',
         'views/menu.xml',
+        'views/patient.xml',
         'views/appointment.xml',
+        'views/female_patient.xml',
         'security/ir.model.access.csv',
         'data/sequence.xml',
     ],

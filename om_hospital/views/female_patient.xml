@@ -16,11 +16,7 @@
            </field>
      </record>
 
-    <menuitem id="hospital_female_patient"
-              name="Female Patients"
-              parent="patient_master"
-              action="action_female_patient"
-              sequence="20"/>
+
 
 
 
