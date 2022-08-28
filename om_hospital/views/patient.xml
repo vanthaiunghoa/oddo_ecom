@@ -52,6 +52,7 @@
                         <field name="image"/>
                         <field name="gender"/>
                         <field name="active" invisible="1"/>
+
                 </group>
                 </sheet>
                 <div class="oe_chatter">
@@ -80,6 +81,7 @@
                 <searchpanel>
                         <field name="gender" icon="fa-users" enable_counters="1"/>
                 </searchpanel>
+                <field name="patient_name" filter_domain="['|',('patient_name', 'ilike', self),('name_seq', 'ilike', self)]"/>
             </search>
         </field>
     </record>
@@ -91,6 +93,8 @@
             <field name="res_model">hospital.patient</field>
             <field name="view_mode">tree,form</field>
             <field name="context">{'search_default_filter_male': 1}</field>
+<!--            <field name="view_type">form</field>-->
+            <field name="view_mode">tree,form</field>
             <field name="help" type="html">
                 <p class="o_view_nocontent_smiling_face">
                     Create First Patient !
@@ -105,5 +109,11 @@
               sequence="0"/>
 
 
+
+
+    <menuitem id="hospital_patient"
+              name="Patients"
+              parent="patient_master"
+              action="action_patient"/>
 
 </odoo>
