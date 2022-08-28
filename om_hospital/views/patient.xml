@@ -110,10 +110,4 @@
 
 
 
-
-    <menuitem id="hospital_patient"
-              name="Patients"
-              parent="patient_master"
-              action="action_patient"/>
-
 </odoo>
