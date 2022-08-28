@@ -13,7 +13,6 @@ class HospitalPatient(models.Model):
     _rec_name = 'name_sec'
     _description = 'Patient Record'
 
-
     patient_name = fields.Char(string='Patient Name', required=True, tracking=True)
     patient_age = fields.Integer('Age')
     notes = fields.Text(string='Notes')
@@ -22,7 +21,6 @@ class HospitalPatient(models.Model):
     name_sec = fields.Char(string='Order Reference', required=True, copy=False, readonly=True,
                            index=True, default=lambda self: _('New'))
     active = fields.Boolean(string="Active", default=True)
-
 
     @api.model
     def create(self, vals):

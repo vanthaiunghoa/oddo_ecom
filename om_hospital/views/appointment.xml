@@ -65,10 +65,6 @@
            </field>
      </record>
 
-    <menuitem id="menu_appointment"
-              name="Appointment"
-              parent="patient_master"
-              action="action_hospital_appointment"
-              sequence="10"/>
+
 
 </odoo>
